@@ -1,0 +1,17 @@
+<div style="text-align:center">
+	<button class="button cyan" (click)="getWords()">Choose the keywords</button>
+	<div>
+		<button *ngFor="let word of selectedWords; index as i" class="word word-info">
+			<span>{{i+1}}</span>
+			<pre>{{ word.value }}</pre>
+		</button>
+	</div>
+</div>
+<div style="text-align:center">
+	<button class="button red" (click)="getCode()">Get the code for this Turn</button>
+	<div>
+		<button *ngIf="selectedCode" class="word word-danger">
+			<pre>{{ selectedCode.value }}</pre>
+		</button>
+	</div>
+</div>
